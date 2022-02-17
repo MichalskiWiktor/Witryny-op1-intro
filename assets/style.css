@@ -1,0 +1,82 @@
+html{
+--col-green: #aaf25d;
+--col-grey: rgb(195, 198, 197);
+--col-dark: #808080;
+--col-darker: #404040;
+--nav-pad: 25vw;
+}
+body{
+    margin:0;
+}
+nav{
+    color: var(--col);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 5vh;
+    width: 100%;
+    background-color: var(--col-dark);
+    margin: 0;
+}
+nav.bottom{
+    bottom: 0;
+}
+nav a {
+    color: var(--col-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    font-weight: 600;
+}
+nav a > ion-icon{
+    color: var(--col-dark);
+    background-color: var(--col-green);
+    border-radius: 50%;
+    padding: .5rem;
+    /*margin:1rem;*/
+}
+/*nav a > span{
+    margin:1rem;
+}*/
+nav a.active > ion-icon{
+    color: var(--col-darker);
+    background-color: var(--col-green);
+}
+nav a:hover, nav a:focus{
+    color: var(--col-dark);
+    background-color: var(--col-grey);
+}
+nav a:hover > ion-icon,
+nav a:focus > ion-icon{
+    color: var(--col-dark);
+    background-color: var(--col-darker);
+}
+nav:not(.bottom) + main{
+    padding-top: var(--nav-pad);
+}
+nav.bottom + main{
+    padding-bottom: var(--nav-pad);
+}
+section h2{
+    margin: 0;
+}
+main > section{
+    margin: 0;
+    padding: 2vw;
+    height:75vh;
+    outline: solid 1px lightgreen;
+    
+}
+main > section:nth-child(odd){
+    background-color: var(--col-green);
+}
+main > section:nth-child(even){
+    background-color: var(--col-grey);
+}
+main + fotter{
+color: var(--col-green);
+background-color: var(--col-dark);
+}
