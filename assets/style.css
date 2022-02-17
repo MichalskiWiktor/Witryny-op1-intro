@@ -80,3 +80,37 @@ main + fotter{
 color: var(--col-green);
 background-color: var(--col-dark);
 }
+table td:nth-child(1){
+    font-weight:bold;
+    font-style: italic;
+}
+table tr:nth-child(odd){
+    background-color: var(--col-grey);
+}
+table tr:nth-child(even){
+    background-color: var(--col-green);
+}
+table{
+    border: 1px solid black;
+}
+table tr td{
+    border: 1px solid black;
+    padding:10px;
+}
+table tr td:last-child{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table tr td:nth-child(1){
+    width: 1rem; /*1 rem lepiej wyglądał niż 5rem czy 5vw*/
+    text-align: center;
+}
+table tr td:nth-child(2){
+    width: 20rem;/*też lepiej wygląda*/
+}
+table tr td:nth-child(3){
+    width: auto;
+}
+table tr td:nth-child(4){
+    width: 8rem;/*i to też*/
+}
